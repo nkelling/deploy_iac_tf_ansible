@@ -27,3 +27,8 @@ variable "instance_type" {
   type    = string
   default = "t3.micro"
 }
+
+variable "webserver_port" {
+  type    = number
+  default = 80
+}
