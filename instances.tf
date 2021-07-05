@@ -51,7 +51,7 @@ resource "aws_instance" "jenkins-master" {
 resource "aws_instance" "jenkins-worker-oregon" {
   provider                    = aws.region-worker
   count                       = var.workers_count
-  ami                         = data.aws_ssm_parameter.linuxAmi.value
+  ami                         = data.aws_ssm_parameter.linuxAmiOregon.value
   instance_type               = var.instance_type
   key_name                    = aws_key_pair.worker-key.key_name
   associate_public_ip_address = true
